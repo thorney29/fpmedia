@@ -1,0 +1,592 @@
+/* 
+Theme Name: Zebra 
+Theme URI: http://tresahorney.com 
+Author: Tresa Horney 
+Author URI: http://tresahorney.com
+Description: My first theme 
+Version: 1.0 License: Creative license */
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+body {
+	font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+	overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: "Bowlby One SC";
+	color: #333;
+}
+h2 {
+	color: #FF3E00;
+}
+.h4, h4 {
+    font-size: 20px;
+}
+a {color: #4589A3;}
+
+.background-img img {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    margin-top: 4%;
+    padding-top: 15px;
+    object-fit: cover;
+    object-position: 10% 21%;
+}
+#big-video .video { 
+  height: 500px;
+}
+.col-center {
+  float: none;
+  margin: 0 auto;
+}
+
+/* Menu area 
+***********************************************************************************/
+
+.dropdown {
+	  width: 250px;
+    font-size: 29px;
+    float: right;
+    padding: 0 .25em;
+    margin: 8px 40px 20px 0;
+    text-align: right;
+}
+.dropdown a {
+	width: 100%;
+	height: 100%;
+	color: #333;
+	font-family: "Bowlby One SC";
+	text-decoration: none;
+}
+.dropdown-toggle {
+	position: relative;
+    z-index: 1;
+    padding: 2em;
+    margin: -2em;
+}
+a:hover.dropdown-toggle .dropdown-menu {
+	display: block;
+}
+.dropdown-menu {
+	min-width: 235px;
+  left: -90px;
+}
+ul#menu-primary {margin:0;padding: 0;}
+ul#menu-primary li {padding: 8px 0;}
+
+ul#menu-primary li a {
+	margin: 0; 
+	padding: 10px;
+	display: block;
+	transition: 0.1s all ease-in-out;
+
+}
+
+ul#menu-primary li:hover{
+	background: #999;
+}
+ul#menu-primary li.current-menu-item:hover {
+	background: #777;
+} 
+ul#menu-primary li.menu-item-has-children {margin: 2 0%; line-height:28.5667px;}
+ul#menu-primary li.menu-item-has-children:before {
+	content: '';
+	display: block;
+  background: url("images/ic_keyboard_arrow_down_black_24px.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 10.5px 4px 0 6px;
+
+}
+
+ul#menu-primary li ul.sub-menu {
+    visibility:hidden; /*  hides the submenu */
+  	height: 0;
+  	
+  	opacity: 0; /* make it see through for effects */
+    
+    font-size: 18px;
+    list-style-type: none !important;
+}  
+
+ul#menu-primary li:hover ul.sub-menu {
+	visibility: visible;
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	transition: all 2s;
+  	height: 100%;
+  	transform: scale(1);
+    opacity: 1;
+    transition:opacity 1s linear;
+    margin:0;
+    padding:  0;
+    
+}
+ul#menu-primary li:hover li {
+  background:white;
+}
+ul#menu-primary li li {
+    padding: 5px;
+    margin: 0px;
+}
+ul#menu-primary li li:hover{
+  background: #666;
+  
+}
+ul#menu-primary li li:hover a {
+   margin:0 0 0 20px;
+  letter-spacing: 1px;
+}
+
+ 
+/* Header content 
+***********************************************************************************/
+
+header,
+footer {
+	padding: 20px;
+}
+header a:hover {
+	text-decoration: none;
+}
+.site-title {
+	margin: 38px 0 0 48px;
+	position: absolute;
+	z-index: 10;
+}
+a .site-title h1 {
+	color:#4589A3;
+	color: white;
+	font-family: Vibur;
+	text-decoration: none;
+}
+a .tagline {
+	font-family: "Bowlby One SC";
+	font-size: 20px;
+	margin: 0 0 0 10px;
+	text-decoration: none;
+}
+
+div.background-logo {position: relative; margin: -12px; z-index: 10;}
+div.background-logo img {
+	width: 200px;
+	height: 100%;
+}
+/* Menus */
+a.menu-item,
+h3.entry-title {
+	display: flex;
+  justify-content: space-between;
+  border-bottom: dotted 1px;
+}
+/*
+Flexbox / main content layout 
+***********************************************************************************/
+.menu-main,
+.blog-main {
+  margin-top: 7%;
+} 
+
+
+.home .container.content.flexbox {
+    margin-top: 13%;
+}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.two {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+.two p {width: 100%}
+.home h1 {
+  text-align: center;
+}
+h2.page-title {
+    text-align: center;
+    font-size: 5em;
+    margin: -95px 0 90px 0;
+    z-index: 1;
+    position: relative;
+    text-shadow: 0px 3px 6px rgba(150, 150, 150, 0.85);
+  }
+
+.two>div.menu-item-post {
+  width: 48%;
+  margin: 0 1%;
+}
+.menu-item-post {
+  width:100%;
+  padding: 10px 0;
+}
+  
+
+
+
+
+/* 
+Sidebar areas 
+***********************************************************************************/
+[id*='sidebar'] {
+  background: #f1f0ec;
+    margin: 25px 0;
+    padding: 1.625em; 
+    color: #000;
+    box-shadow: 0px 3px 6px rgba(150, 150, 150, 0.85);
+}
+
+[id*='sidebar'] a {
+    color: #666;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+[id*='sidebar'] #searchform {
+  padding:0 10px 10px;
+}
+[id*='sidebar'] label.screen-reader-text {
+  display: block; 
+  visibility: hidden;
+  line-height: 0;
+}
+/*Search in sidebar */
+[id*='sidebar'] #s {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+[id*='sidebar'] input#s:not([type=submit]):not([type=file]) {
+ 
+}
+
+[id*='sidebar']  #s.material-icons:active,
+[id*='sidebar']  #s.material-icons:focus,
+[id*='sidebar']  #s.material-icons:hover {
+  width: 100%;
+  border-radius: 0;
+  padding-left: 8px;
+}
+
+[id*='sidebar'] input#s:not(:placeholder-shown),
+.search.results form input {
+  width: 100%;
+  color: black;
+  border-radius: 0;
+  text-align: left;
+  font-family: "Open Sans", sans-serif; 
+  padding-left: 8px;
+  position:relative;
+}
+[id*='sidebar'] #s::after {
+  content: '*';
+   margin: 0 0 0 0.5em;
+    position: absolute;
+    top: 0;
+    right: -1em;
+}
+[id*='sidebar'] #s::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #DE3905;
+  text-align: center;
+}
+[id*='sidebar'] #s::-moz-placeholder { /* Firefox 19+ */
+  color: #DE3905;
+  text-align: center;
+}
+[id*='sidebar'] #s:-ms-input-placeholder { /* IE 10+ */
+  color: #DE3905;
+  text-align: center;
+}
+[id*='sidebar'] #s:-moz-placeholder { /* Firefox 18- */
+  color: #DE3905;
+  text-align: center;
+} 
+[id*='sidebar'] input#s+input#searchsubmit {
+  opacity: 0;
+  transition: 1s;
+}
+
+[id*='sidebar'] input#s:not(:placeholder-shown)+input#searchsubmit {
+    opacity: 1;
+    margin: 6px 0;
+    line-height: 35px;
+    background: #DE3905;
+    color: white;
+    border:none;
+    box-shadow: 0px 3px 6px rgba(150, 150, 150, 0.85);
+}
+
+[id*='sidebar'] input#s:not(:placeholder-shown)+input#searchsubmit:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.search.results label {visibility: hidden;}
+.search.results form input {
+  line-height: 50px;
+  vertical-align: top;
+  width: initial;
+}
+.search.results form input:not([type=submit]) {
+  width: 60%;
+}
+.search.results form input[type=submit] {
+  width: 15%;
+  text-align: center;
+}
+
+.blog ul#sidebar {
+    font-size: 24px;
+    font-family: "Bowlby One SC";
+    color: #333;
+}
+aside img {
+	margin: auto;
+    display: block;
+}
+.blog ul ul {
+	font-size: initial;    
+	font-family: "Open Sans", sans-serif;
+}
+ul.menu {
+	margin: 0;
+	padding: 10px;
+	list-style-type: none !important;
+	font-size: 20px;
+}
+
+/* Tags */
+.tag-link-count {display: none;}
+.tagcloud a {
+  display: flex;
+  align-items: center;
+  color: #666;
+  padding: 4px 10px;
+} 
+.tagcount{ /* wrap sidebar #s in a circle */
+  border-radius: 50%;
+  behavior: url(PIE.htc);
+  /* remove if you don't care about IE8 */
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #666;
+  text-align: center;
+   margin: 2px;
+   margin-left: auto;
+   font-size: 14px;
+}
+
+/* 
+Home page content 
+***********************************************************************************/
+
+/* 
+Homepage Slider area 
+***********************************************************************************/
+
+.slider-container {
+	margin-top: -173px;
+    z-index: 0;
+    position: relative;
+    object-fit: cover;
+    object-position: 10% 24%;
+    opacity: 0;
+    transition: 0.1s all ease-in-out;
+}
+
+.metaslider .caption-wrap {
+    display: table !important;
+    width: 60% !important;
+    bottom: 0;
+    top: 40% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: black;
+    color: white;
+    opacity: 0.75;
+    margin: 0 auto !important;
+    padding-bottom: 20px;
+    display: table !important;
+    width: 60% !important;
+    z-index: 80;
+}
+.metaslider .caption {
+  display: table-cell !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 22px;
+}
+.metaslider .caption h2 {
+	color: white;
+	font-size: 62px !important;
+	font-family: "Bowlby One SC";
+	letter-spacing: 1px;
+}
+
+.metaslider a.button {
+  display: table;
+  border: 1px solid white;
+  padding:.625em;
+  margin: 2% auto;
+  color:white;
+}
+.metaslider a.button:hover {
+  border: 1px solid white;
+  color:black;
+  background: white;
+}
+
+/* Video background 
+***************************************************************/
+ 
+.video-wrapper {position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;}
+.video-wrapper iframe {position: absolute; top: -173px; left: 0; width: 100%; height: 100%;}
+
+/* 
+Footer area 
+***********************************************************************************/
+
+footer {
+  float: left;
+  background: #333;
+}
+footer .widget-container  {
+  margin-top: 14%;
+}
+footer h3 {
+  color: white;
+    text-align: center;
+    border: 1px solid white;
+    padding: .625em;
+    display: table;
+    margin: 4%auto;
+    float: none;
+}
+footer a {color: #c7cacc;}
+footer .mdi,
+footer p {color: white;}
+footer p, footer li {text-align: center;}
+footer ul#menu-social-media {display: flex;justify-content: center;}
+footer #menu-social-media li{display: inline-block;}
+footer #menu-social-media a.mdi:hover{
+  color: #FF0000;
+}
+body[class*='template-menu'] h2.page-title {color: #f1edeb;}
+
+.menu-main #menu-food-menus {display: flex; flex-flow: wrap;}
+.menu-main #menu-food-menus li {
+  width: 31.333%;
+  height: 200px;
+  display: inline-block;
+  text-align: center;
+}
+
+footer #wpgmza_map {
+    display: block;
+    border-radius: 50%;
+    border: 4px solid black;
+    margin: 4% auto;
+}
+
+
+/* Instagram
+---------------------------------------------------------------------------------------------------- */
+/**/
+
+.instagram-pics {
+  padding: 0;
+  margin: auto;
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+
+  
+}
+.instagram-pics li {
+  margin: 2%;
+}
+.instagram-pics a{
+  display:block;
+  overflow:hidden;
+  position:relative;
+  width:150px;
+  height:150px;
+  font-size: 10px;
+}
+ 
+.instagram-pics a:after, .instagram-pics a:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.instagram-pics a:after {
+    content:'\A';
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+}
+.instagram-pics a:before {
+    content: attr(title);
+    width:100%;
+    color:#fff;
+    z-index:1;
+    left: 0;
+    bottom:0;
+    padding:0px 10px;
+    text-align:center;
+    background:rgba(0,0,0,.7);
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.instagram-pics a:hover:after, .instagram-pics a:hover:before {
+    opacity:1;
+}
+
+
+/* Home page container */
+@media (min-width: 1200px) {
+  .home .container {
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+  }
+  .home .row {
+    margin: 0 auto;
+    width: 1170px;
+  }
+}
