@@ -97,7 +97,7 @@ jQuery(document).ready(function($){
 	      (element_top_position <= window_bottom_position)) {
 	      $element.addClass('in-view');
 	    } else {
-	      $element.removeClass('in-view');
+	      //$element.removeClass('in-view');
 	    }
 	  });
 	  $.each($animation_elements_second, function() {
@@ -111,7 +111,7 @@ jQuery(document).ready(function($){
 	      (element_top_position <= window_bottom_position)) {
 	      $element.addClass('in-view');
 	    } else {
-	      $element.removeClass('in-view');
+	      //$element.removeClass('in-view');
 	    }
 	  });
 	}
@@ -152,20 +152,6 @@ jQuery(document).ready(function($){
     $('#carousel-oxOwO').carousel({
 	  interval: 10000
 	})
-	$(function() {
-        $(".video").click(function () {
-        var theModal = $(this).data("target"),
-        videoSRC = $(this).attr("data-video"),
-        videoSRCauto = videoSRC;
-        $(theModal + ' iframe').attr('src', videoSRCauto);
-        $(theModal + ' button.close').click(function () {
-            $(theModal + ' iframe').attr('src', '');
-        });
-        });
-    });
-
-	$('#videoModal').on('hidden.bs.modal', function (e) {
-	$('#videoModal').find('iframe').attr('src', '');
-	});
+	 
 
  });

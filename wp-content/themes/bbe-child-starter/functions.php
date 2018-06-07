@@ -108,4 +108,8 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 //     // To Disable Smart Quotes for WordPress 4.0 or higher
 //     add_filter( 'run_wptexturize', '__return_false' );
 // }
+add_filter( 'wp_image_editors', 'change_graphic_lib' );
 
+function change_graphic_lib($array) {
+  return array( 'WP_Image_Editor_GD', 'WP_Image_Editor_Imagick' );
+}
